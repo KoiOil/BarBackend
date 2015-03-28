@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-       resources :bars, except: [:new, :edit, :delete]
+     	resources :bars
     end
   end
 end
