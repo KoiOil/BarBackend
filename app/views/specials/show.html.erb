@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Barid:</strong>
+  <%= @special.barid %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @special.description %>
+</p>
+
+<%= link_to 'Edit', edit_special_path(@special) %> |
+<%= link_to 'Back', specials_path %>

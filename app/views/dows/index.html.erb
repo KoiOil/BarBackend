@@ -1,0 +1,27 @@
+<h1>Listing dows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Specialid</th>
+      <th>Day</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dows.each do |dow| %>
+      <tr>
+        <td><%= dow.specialid %></td>
+        <td><%= dow.day %></td>
+        <td><%= link_to 'Show', dow %></td>
+        <td><%= link_to 'Edit', edit_dow_path(dow) %></td>
+        <td><%= link_to 'Destroy', dow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dow', new_dow_path %>

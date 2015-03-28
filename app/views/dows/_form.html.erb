@@ -1,0 +1,25 @@
+<%= form_for(@dow) do |f| %>
+  <% if @dow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dow.errors.count, "error") %> prohibited this dow from being saved:</h2>
+
+      <ul>
+      <% @dow.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :specialid %><br>
+    <%= f.number_field :specialid %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.text_field :day %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
