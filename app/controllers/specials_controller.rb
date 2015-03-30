@@ -4,6 +4,7 @@ class SpecialsController < ApplicationController
   # GET /specials
   # GET /specials.json
   def index
+    @bars = Bar.all
     @specials = Special.all
   end
 
